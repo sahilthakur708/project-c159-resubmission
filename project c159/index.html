@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Comics</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+  <script src="js/CursorEvents.js"></script>
+  <script src="js/comic.js"></script>
+</head>
+
+<body>
+  <a-scene id="main-scene">
+
+
+    <a-sky id="main-container" radius="5000" color="#98DAFC"></a-sky>
+
+    <!-- Places Container -->
+    <a-entity id="places-container" cursor-listener comic></a-entity>
+
+
+    <!-- CAMERA -->
+    <a-camera id="camera" wasd-controls="enabled:false;">
+      <!-- App Title -->
+
+     
+      <!--Background-->
+      <a-entity> </a-entity>
+      <a-entity id="camera-cursor" cursor position="0 -2 -3"
+        geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3" material="color: #fff; shader: flat">
+
+
+
+    </a-camera>
+    <a-entity id="iron-man" position="0 0.73 -1"
+    text="font: exo2bold; align: center; width: 2; color: #000; value:This is iron man" visible="false">
+  </a-entity>
+  </a-scene>
+</body>
+
+</html>
